@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/GrowthHungry/GrowthHungry.iml" filepath="$PROJECT_DIR$/GrowthHungry/GrowthHungry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/GrowthHungryAcademy.iml" filepath="$PROJECT_DIR$/.idea/GrowthHungryAcademy.iml" />
+    </modules>
+  </component>
+</project>
