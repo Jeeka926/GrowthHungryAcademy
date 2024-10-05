@@ -7,6 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/cs_and_programming/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/cs_and_programming/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/github/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/target/generated-test-sources" isTestSource="true" generated="true" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
