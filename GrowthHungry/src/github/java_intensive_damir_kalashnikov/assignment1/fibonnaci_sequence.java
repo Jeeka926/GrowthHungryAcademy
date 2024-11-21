@@ -1,6 +1,4 @@
-package java_intensive_damir_kalashnikov;
-
-import java.util.HashMap;
+package assignment1;
 
 public class fibonnaci_sequence {
     /* HW - week 1

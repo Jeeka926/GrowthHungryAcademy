@@ -1,4 +1,4 @@
-package java_intensive_damir_kalashnikov;
+package assignment1;
 
 import java.util.Scanner;
 
