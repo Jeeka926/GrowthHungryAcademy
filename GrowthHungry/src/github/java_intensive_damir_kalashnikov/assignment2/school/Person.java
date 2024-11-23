@@ -1,8 +1,8 @@
 package assignment2.school;
 
 public class Person {
-    String name;
-    int age;
+    protected String name;
+    protected int age;
 
     public Person(String name, int age) {
         this.name = name;
@@ -10,10 +10,6 @@ public class Person {
     }
 
     public void displayDetails(){
-        System.out.println("Name: "+name +" age: "+ age);
-    }
-
-    public int getAge() {
-        return age;
+        System.out.println("Student's name: "+name +". Student's age: "+ age +".");
     }
 }

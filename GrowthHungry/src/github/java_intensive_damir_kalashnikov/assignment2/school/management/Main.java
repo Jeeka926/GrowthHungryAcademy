@@ -14,7 +14,15 @@ public class Main {
         courseManager.addStudent(student2);
         courseManager.addStudent(student3);
 
-        //student1.enrollCourse("Kyrgyz Language");
+        student1.enrollCourse("Kyrgyz Language");
+        student1.enrollCourse("Calculus");
+        student3.enrollCourse("Computer Science");
+
+        student1.displayDetails();
+        student1.displayEnrolledClasses();
+        student1.displayTuition();
+
+
 
 
     }

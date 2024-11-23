@@ -6,7 +6,7 @@ public class CourseManager {
     private ArrayList <Student> students;
 
     public CourseManager() {
-        students = new ArrayList<>();
+        this.students = new ArrayList<>();
     }
 
     public void addStudent(Student student) {
@@ -17,5 +17,13 @@ public class CourseManager {
 
     public void displayAllStudents() {
         //Loops through the list and displays the details of all students.
+        System.out.println("There are " + students.size()+ " student in total");
+        for(Student student:students){
+            student.displayDetails();
+        }
+    }
+
+    public void removeStudent(Student student){
+        students.remove(student);
     }
 }

@@ -1,13 +1,11 @@
 package assignment2.school.management;
 
-
 import assignment2.school.Person;
-
-import java.util.List;
+import java.util.Arrays;
 
 public class Student extends Person {
     private int studentID;
-    private List<String> enrolledCourses;
+    private String[] enrolledCourses;
     private double tuition;
 
 
@@ -15,23 +13,60 @@ public class Student extends Person {
         return tuition;
     }
 
-    public void setTuition(double tuition) {
-        this.tuition = enrolledCourses.size()  * 500;
-    }
-
     public Student(int age, String name, int studentID ) {
         super(name, age);
         this.studentID = studentID;
+        this.enrolledCourses = new String[8];
     }
 
-    public void enrollCourse(List<String>enrolledCourse){
-        this.enrolledCourses = enrolledCourses;
+    public void calculateTuition(){
+        int numberOfCourses =0;
+        for (String course : this.enrolledCourses){
+          if (course != null){
+              numberOfCourses++;
+          }
+        }
+        this.tuition = numberOfCourses *500;
     }
-    public void enrolledCourses(String enrolledCourse){
-        this.enrolledCourses.add(enrolledCourse);
+
+    public void enrollCourse(String[] enrolledCourses) {
+        for (String course : enrolledCourses) {
+            enrollCourse(course);
+        }
     }
-    public int getStudentId(){
+        public void enrollCourse (String courseName){
+            for (int i = 0; i < enrolledCourses.length; i++) {
+                if (enrolledCourses[i] == null) {
+                    this.enrolledCourses[i] = courseName;
+                    break;
+                }
+            }
+            calculateTuition();
+            System.out.println("Student was enrolled in the course " + courseName);
+        }
+
+        public  void dropCourse(String courseName){
+            for (int i =0; i< enrolledCourses.length; i++){
+                if(courseName.equals(enrolledCourses[i])){
+                    enrolledCourses[i]= null;
+                    calculateTuition();
+                    System.out.println("Student was removed from the course "+ courseName);
+                    return;
+                }
+            }
+            System.out.println("Course " + courseName + " not found for this student.");
+        }
+
+        public void displayTuition(){
+            System.out.println("Tuition: $ "  + getTuition());
+        }
+        public void displayEnrolledClasses(){
+            System.out.println("Student: " + name + " is enrolled in these courses: "+ Arrays.toString(enrolledCourses));
+        }
+        /*
+        public int getStudentId(){
         return studentID;
-    }
+        }*/
+
 }
 
